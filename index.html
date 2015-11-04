@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stocks</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Stocks</h1>
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="query">Search stocks:</label>
+        <input type="text" class="form-control" id="query" placeholder="Symbol or company">
+      </div>
+      <button type="button" class="btn btn-default" id='search'>Search</button>
+    </form>
+    <table class="table table-hover table-condense">
+      <thead>
+        <tr id="row">
+          <th class='col-xs-6'>Name</th>
+          <th class='col-xs-3'>Symbol</th>
+          <th class='col-xs-3'>Exchange</th>
+        </tr>
+      </thead>
+      <tbody id='results'>
+
+      </tbody>
+    </table>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
