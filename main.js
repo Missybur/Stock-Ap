@@ -21,7 +21,6 @@ function getQuote(event){
     console.error(err);
   });
 
-
 }
 
 function searchStocks(event){
@@ -41,6 +40,7 @@ function searchStocks(event){
   });
 }
 
+
 function drawResults(results){
   var $results = $('#results');
   $results.empty();
@@ -51,7 +51,11 @@ function drawResults(results){
     var $name = $('<td>').text(result.Name);
     var $symbol = $('<td>').text(result.Symbol).addClass('symbol');
     var $exchange = $('<td>').text(result.Exchange);
-    $tr.append($name, $symbol, $exchange);
+    var now = new Date();
+    var date = [ now.getMonth() + 1, now.getDate(), now.getFullYear() ];
+    var time = [ now.getHours(), now.getMinutes() ];
+    var $timestamp = $('<td>').text(date.join("/") + " " + time.join(":"));
+    $tr.append($name, $symbol, $exchange, $timestamp);
     $rows.push($tr);
   });
 

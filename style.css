@@ -1,4 +1,22 @@
+body {
+  background-color: #B5D1FF;
+  color: #7D7052;
+}
+
 table {
   width: 150px;
   height: 150px;
 }
+
+#query {
+  background-color: #7D7052;
+  color: #FFF;
+  border: 2px solid #5E81B8;
+}
+
+#search {
+  background-color: #5E81B8;
+  color: #7D7052;
+  border: 2px solid #B5D1FF;
+}
+
